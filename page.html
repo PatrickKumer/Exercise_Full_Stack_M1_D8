@@ -15,10 +15,11 @@
       <button onclick="changePcontent()">Change the text of paragraph</button>
       <button onclick="addToTheSecond()">Add a item to second list</button>
       <button onclick="addParagraph()">Add a paragraph</button>
+      <button onclick="firstUlDisappear()">Remove first unordered list</button>
       <h2>This is the subtitle of the page</h2>
     </div>
 
-    <div>
+    <div id="div2">
       <hr>
 
       <ul id="firstList">
@@ -117,7 +118,8 @@
       */
 
       const firstUlDisappear = function () {
-        //
+        let list = document.getElementById("div2")
+        list.removeChild(list.childNodes[1])
       };
 
       /* EXERCISE 8
