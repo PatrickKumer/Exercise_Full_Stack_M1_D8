@@ -11,6 +11,8 @@
     <div>
       <h1 id="title" >This is the title of the page</h1>
       <input type="button" onclick="changeTitle()" value="Change the text of title">
+      <input type="button" onclick="addClassToTitle()" value="Change the color of title">
+      <button onclick="changePcontent()">Change the text of paragraph</button>
       <h2>This is the subtitle of the page</h2>
     </div>
 
@@ -29,7 +31,7 @@
         <li>3rd</li>
       </ul>
 
-      <a href="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/strive.school">This link goes to Strive School</a>
+      <a id="googleLink" href="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/strive.school">This link goes to Strive School</a>
 
       <div>
         <p>This text is just for the exercise</p>
@@ -71,7 +73,10 @@
       */
 
       const changePcontent = function () {
-        
+        let p = document.getElementsByTagName("p")
+        for (p1 of p){
+          p1.innerText = ("I changed the text!")
+        }
       };
 
       /* EXERCISE 4
@@ -79,7 +84,7 @@
       */
 
       const changeUrls = function () {
-        //
+        document.getElementsByTagName("a")[0].setAttribute("href", "http://www.google.com")
       };
 
       /* EXERCISE 5
