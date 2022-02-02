@@ -8,12 +8,13 @@
     </style>
   </head>
   <body>
-    <div>
+    <div id="aDiv">
       <h1 id="title" >This is the title of the page</h1>
       <input type="button" onclick="changeTitle()" value="Change the text of title">
       <input type="button" onclick="addClassToTitle()" value="Change the color of title">
       <button onclick="changePcontent()">Change the text of paragraph</button>
       <button onclick="addToTheSecond()">Add a item to second list</button>
+      <button onclick="addParagraph()">Add a paragraph</button>
       <h2>This is the subtitle of the page</h2>
     </div>
 
@@ -103,8 +104,12 @@
        Write a function for adding a second paragraph to the first div.
       */
 
-      const addParagraph = function (content) {
-        //
+      const addParagraph = function () {
+        let paragraph = document.createElement("p")
+        let add1 = document.createTextNode("Hello, i am a paragraph")
+        paragraph.appendChild(add1)
+        let element1 = document.getElementById("aDiv")
+        element1.appendChild(paragraph)
       };
 
       /* EXERCISE 7
