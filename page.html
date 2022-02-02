@@ -9,7 +9,8 @@
   </head>
   <body>
     <div>
-      <h1>This is the title of the page</h1>
+      <h1 id="title" >This is the title of the page</h1>
+      <input type="button" onclick="changeTitle()" value="Change the text of title">
       <h2>This is the subtitle of the page</h2>
     </div>
 
@@ -52,7 +53,8 @@
       */
 
       const changeTitle = function (newTitle) {
-        //
+        let titleNode = document.getElementById("title")
+        titleNode.innerText = "Hello, i am a new title."
       };
 
       /* EXERCISE 2
@@ -60,7 +62,8 @@
       */
 
       const addClassToTitle = function () {
-        //
+        let h1 = document.getElementById("title")
+        h1.classList.add("myHeading")
       };
 
       /* EXERCISE 3
@@ -68,7 +71,7 @@
       */
 
       const changePcontent = function () {
-        //
+        
       };
 
       /* EXERCISE 4
