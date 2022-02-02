@@ -19,20 +19,23 @@
       <h2>This is the subtitle of the page</h2>
     </div>
 
-    <div id="div2">
-      <hr>
+    <div>
+ 
+  </hr>
+<div id="div2" onmouseover="paintItGreen(event, 'darkgreen')">
+  <ul id="firstList">
+    <li>1st</li>
+    <li>2nd</li>
+    <li>3rd</li>
+  </ul>
 
-      <ul id="firstList">
-        <li>1st</li>
-        <li>2nd</li>
-        <li>3rd</li>
-      </ul>
-
-      <ul id="secondList">
-        <li>1st</li>
-        <li>2nd</li>
-        <li>3rd</li>
-      </ul>
+  <ul id="secondList">
+    <li>1st</li>
+    <li>2nd</li>
+    <li>3rd</li>
+  </ul>
+</div>
+     
 
       <a id="googleLink" href="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/strive.school">This link goes to Strive School</a>
 
@@ -126,8 +129,9 @@
        Write a function for making the background of every unordered list green.
       */
 
-      const paintItGreen = function () {
-        //
+      const paintItGreen = function (event, color) {
+        let unorderedList = event.target
+        unorderedList.style.color = color
       };
 
       /* EXERCISE 9
